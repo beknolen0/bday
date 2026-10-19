@@ -354,6 +354,21 @@ Take care of yourself, okay? 🤍 </div>
 
       setInterval(createHeart, 850);
     }
-  </script>
+    </script>
+
+    <audio id="birthdaySong" loop>
+      <source src="gladuexist.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      window.addEventListener("load", () => {
+        const song = document.getElementById("birthdaySong");
+        song.volume = 0.4;
+        song.play().catch(() => {
+          console.log("Tap the page to start the music!");
+        });
+      });
+    </script>
+  
 </body>
 </html>
